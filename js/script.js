@@ -33,10 +33,9 @@
       }
     }
 
-    let randomNumber = Math.floor(Math.random() * 3 + 1);
-    let computerMove = getMoveName(randomNumber);
-    /*let playerInput = prompt('Wybierz swój ruch! 1: kamień, 2: papier, 3: nożyce.');*/
-    let playerMove = getMoveName(playerInput);
+    const randomNumber = Math.floor(Math.random() * 3 + 1);
+    const computerMove = getMoveName(randomNumber);
+    const playerMove = getMoveName(playerInput);
 
     console.log("Gracz wpisał: " + playerInput);
     console.log("Wylosowana liczba to: " + randomNumber);
@@ -46,26 +45,17 @@
     displayResult(computerMove, playerMove);
   }
 
-  let kamienButton = document.getElementById("btn_rock");
-  let papierButton = document.getElementById("btn_paper");
-  let nozyczeButton = document.getElementById("btn_scissores");
+  const kamienButton = document.getElementById("btn_rock");
+  const papierButton = document.getElementById("btn_paper");
+  const nozyczeButton = document.getElementById("btn_scissores");
 
-
-  function buttonClicked() {
+  kamienButton.addEventListener("click", function () {
     playGame(1);
-  }
-
-  kamienButton.addEventListener("click", buttonClicked);
-  papierButton.addEventListener("click", buttonClicked);
-  nozyczeButton.addEventListener("click", buttonClicked);
-
-
-  /*.addEventListener("click", function () {
+  });
+  papierButton.addEventListener("click", function () {
     playGame(2);
   });
-  document
-    .getElementById("btn_scissores")
-    .addEventListener("click", function () {
-      playGame(3);
-    });*/
+  nozyczeButton.addEventListener("click", function () {
+    playGame(3);
+  });
 }
