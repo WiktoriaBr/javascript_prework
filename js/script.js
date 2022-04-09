@@ -49,13 +49,17 @@
   const papierButton = document.getElementById("btn_paper");
   const nozyczeButton = document.getElementById("btn_scissores");
 
-  kamienButton.addEventListener("click", function () {
+  const kamienWynik = function () {
     playGame(1);
-  });
-  papierButton.addEventListener("click", function () {
+  };
+  const papierWynik = function () {
     playGame(2);
-  });
-  nozyczeButton.addEventListener("click", function () {
+  };
+  const nozyceWynik = function () {
     playGame(3);
-  });
+  };
+
+  kamienButton.addEventListener("click", kamienWynik);
+  papierButton.addEventListener("click", papierWynik);
+  nozyczeButton.addEventListener("click", nozyceWynik);
 }
