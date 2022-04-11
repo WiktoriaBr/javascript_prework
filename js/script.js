@@ -57,21 +57,21 @@
     printMessage(resultOfGame);
   }
 
-  const kamienButton = document.getElementById("btn_rock");
-  const papierButton = document.getElementById("btn_paper");
-  const nozyczeButton = document.getElementById("btn_scissores");
+  const rockButton = document.getElementById("btn_rock");
+  const paperButton = document.getElementById("btn_paper");
+  const scissorsButton = document.getElementById("btn_scissores");
 
-  const kamienWynik = function () {
+  const kamienResult = function () {
     playGame(1);
   };
-  const papierWynik = function () {
+  const papierResult = function () {
     playGame(2);
   };
-  const nozyceWynik = function () {
+  const nozyceResult = function () {
     playGame(3);
   };
 
-  kamienButton.addEventListener("click", kamienWynik);
-  papierButton.addEventListener("click", papierWynik);
-  nozyczeButton.addEventListener("click", nozyceWynik);
+  rockButton.addEventListener("click", kamienResult);
+  paperButton.addEventListener("click", papierResult);
+  scissorsButton.addEventListener("click", nozyceResult);
 }
