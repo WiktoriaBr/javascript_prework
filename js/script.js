@@ -8,41 +8,36 @@
 
     const computerMove = function (argMoveId) {
       if (argMoveId == 1) {
-        computerMoveName = "kamień";
         return "kamień";
-      } else if (argMoveId == 2) {
-        computerMoveName = "papier";
+      } else if (argMoveId == 2) {      
         return "papier";
-      } else if (argMoveId == 3) {
-        computerMoveName = "nożyce";
+      } else if (argMoveId == 3) {      
         return "nożyce";
       } else {
-        computerMoveName = "nieznany ruch";
         return "nieznany ruch";
       }
     };
 
     const playerMove = function (argMoveId) {
       if (argMoveId == 1) {
-        playerMoveName = "kamień";
         return "kamień";
       } else if (argMoveId == 2) {
-        playerMoveName = "papier";
         return "papier";
       } else if (argMoveId == 3) {
-        playerMoveName = "nożyce";
         return "nożyce";
       } else {
-        playerMoveName = "nieznany ruch";
         return "nieznany ruch";
       }
     };
-
+ 
     console.log("Gracz wpisał: " + playerInput);
     console.log("Wylosowana liczba to: " + randomNumber);
 
-    printMessage("(Komputer)  Mój ruch to: " + computerMove(randomNumber));
-    printMessage("Twój ruch to: " + playerMove(playerInput));
+    computerMoveName = computerMove(randomNumber);
+    playerMoveName = playerMove(playerInput);
+
+    printMessage("(Komputer)  Mój ruch to: " + computerMoveName);
+    printMessage("Twój ruch to: " + playerMoveName);
 
     const resultOfGame = function (argComputerMove, argPlayerMove) {
       if (
@@ -63,6 +58,7 @@
         return "Użyłeś nieznanego ruchu!";
       }
     };
+    
 
     printMessage(resultOfGame(computerMoveName, playerMoveName));
   }
